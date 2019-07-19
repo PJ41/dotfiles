@@ -21,6 +21,9 @@ Plugin 'hynek/vim-python-pep8-indent'
 " Python syntax
 Plugin 'hdima/python-syntax'
 
+" Theme
+Plugin 'joshdick/onedark.vim'
+
 " End plugins
 call vundle#end()
 filetype plugin indent on

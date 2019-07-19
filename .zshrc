@@ -103,3 +103,6 @@ alias tmuxclose="tmux kill-session -t"
 
 # Vritualenvwrapper support
 source /usr/local/bin/virtualenvwrapper.sh 
+
+# Fortune
+fortune | cowsay
