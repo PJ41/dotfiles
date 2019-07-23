@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/patrick/.oh-my-zsh"
+export ZSH="/home/zoellerpj/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -97,12 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias tmuxnew="tmux new -s"
 alias tmuxopen="tmux a -t"
 alias tmuxclose="tmux kill-session -t"
-
-# Vritualenvwrapper support
-source /usr/local/bin/virtualenvwrapper.sh 
-
-# Fortune
-fortune | cowsay

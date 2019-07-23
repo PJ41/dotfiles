@@ -37,7 +37,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
 
 " NERDTree UI config
-let NERDTreeMinimalUI = 1
+" let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 " Delete
