@@ -1,65 +1,55 @@
-" Required
-set nocompatible
-filetype off
+set nocompatible                         " Required
+filetype off                             " Required
 
-" Set the runtime path to include Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
+" PLUGINS CONFIG
+set rtp+=~/.vim/bundle/Vundle.vim        " Vundle begin
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'               " Vundle
 
-" NERDTree plugin
-Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'             " NERDTree
 
-" GIT status for NERDTree
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Xuyuanp/nerdtree-git-plugin'     " GIT Status for NERDTree
 
-" Python pep8 indent
-Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'hynek/vim-python-pep8-indent'    " Python pep8 indent
 
-" Python syntax
-Plugin 'hdima/python-syntax'
+Plugin 'hdima/python-syntax'             " Python syntax
 
-" Theme
-Plugin 'joshdick/onedark.vim'
+Plugin 'stephpy/vim-yaml'                " Yaml syntax
 
-" End plugins
-call vundle#end()
+Plugin 'joshdick/onedark.vim'            " Theme
+
+call vundle#end()                        " Vundle end
 filetype plugin indent on
+" END PLUGINS 
 
-" Open NERDTree mapping
+" NERDTree CONFIG
 map <C-n> :NERDTreeToggle<CR>
 
-" NERDTree open automatically when opening a directory
-autocmd StdinReadPre * let s:std_in=1
+autocmd StdinReadPre * let s:std_in=1    " Open automatically on directory
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
 
-" NERDTree UI config
-" let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+let NERDTreeDirArrows = 1                " Directional arrows
 
-" Delete
-let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeAutoDeleteBuffer = 1         " Auto delete
 
-" NERDTree show hidden files by default
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=1                 " Show hidden files
+" END NERDTree CONFIG
 
-" Change tabs to spaces
-set tabstop=4 
+" GENERAL CONFIG
+set tabstop=4                            " Tabs to spaces
 set shiftwidth=4
 set expandtab
 
-" Highlight matching search patterns
-set hlsearch
+set hlsearch                             " Highlights for searches
 
-" Enable incremental search
-set incsearch
+set incsearch                            " Incremental search
 
-" Ignore cases
-set ignorecase
+set ignorecase                           " Ignore case
 set smartcase
 
-" Show number lines
-set number
+set number                               " Show number lines
+
+syntax on                                " Syntax on
+"END GENERAL CONFIG
