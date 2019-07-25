@@ -1,7 +1,7 @@
 set nocompatible                         " Required
 filetype off                             " Required
 
-" PLUGINS CONFIG
+"PLUGINS CONFIG
 set rtp+=~/.vim/bundle/Vundle.vim        " Vundle begin
 call vundle#begin()
 
@@ -26,13 +26,12 @@ filetype plugin indent on
 " NERDTree CONFIG
 map <C-n> :NERDTreeToggle<CR>
 
-autocmd StdinReadPre * let s:std_in=1    " Open automatically on directory
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
+let g:NERDTreeQuitOnOpen = 1
 
-let NERDTreeDirArrows = 1                " Directional arrows
+let g:NERDTreeWinPos = "right"           " Tree on right
 
-let NERDTreeAutoDeleteBuffer = 1         " Auto delete
+let NERDTreeDirArrows = 1                " Better UI 
+let NERDTreeMinimalUI = 1
 
 let NERDTreeShowHidden=1                 " Show hidden files
 " END NERDTree CONFIG
