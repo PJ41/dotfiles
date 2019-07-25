@@ -28,9 +28,8 @@ map <C-n> :NERDTreeToggle<CR>
 
 let g:NERDTreeQuitOnOpen = 1
 
-let g:NERDTreeWinPos = "right"           " Tree on right
-
-let NERDTreeDirArrows = 1                " Better UI 
+let g:NERDTreeWinPos = "right"           " Better UI 
+let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
 
 let NERDTreeShowHidden=1                 " Show hidden files
@@ -52,3 +51,4 @@ set number                               " Show number lines
 
 syntax on                                " Syntax on
 "END GENERAL CONFIG
+
