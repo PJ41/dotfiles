@@ -9,7 +9,7 @@ Plugin 'gmarik/Vundle.vim'               " Vundle
 
 Plugin 'scrooloose/nerdtree'             " NERDTree
 
-Plugin 'Xuyuanp/nerdtree-git-plugin'     " GIT Status for NERDTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'     " Git status for NERDTree
 
 Plugin 'hynek/vim-python-pep8-indent'    " Python pep8 indent
 
@@ -26,7 +26,7 @@ filetype plugin indent on
 " NERDTree CONFIG
 map <C-n> :NERDTreeToggle<CR>
 
-let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 1             " Toggle on file open
 
 let g:NERDTreeWinPos = "right"           " Better UI 
 let NERDTreeDirArrows = 1
