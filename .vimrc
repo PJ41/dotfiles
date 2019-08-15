@@ -1,39 +1,35 @@
 set nocompatible                         " Required
 filetype off                             " Required
 
-"PLUGINS CONFIG
+" PLUGINS CONFIG
 set rtp+=~/.vim/bundle/Vundle.vim        " Vundle begin
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'               " Vundle
 
-Plugin 'scrooloose/nerdtree'             " NERDTree
+Plugin 'jeetsukumaran/vim-filebeagle'    " File explorer
 
-Plugin 'Xuyuanp/nerdtree-git-plugin'     " Git status for NERDTree
+Plugin 'scrooloose/syntastic'            " Overall syntax
 
-Plugin 'hynek/vim-python-pep8-indent'    " Python pep8 indent
+Plugin 'hdima/python-syntax'             " Python support
+Plugin 'hynek/vim-python-pep8-indent' 
 
-Plugin 'hdima/python-syntax'             " Python syntax
+Plugin 'rust-lang/rust.vim'              " Rust syntax
+
+Plugin 'urso/haskell_syntax.vim'         " Haskell support
+Plugin 'itchyny/vim-haskell-indent'
 
 Plugin 'stephpy/vim-yaml'                " Yaml syntax
 
-Plugin 'joshdick/onedark.vim'            " Theme
+Plugin 'cespare/vim-toml'                " Toml syntax
 
 call vundle#end()                        " Vundle end
 filetype plugin indent on
 " END PLUGINS 
 
-" NERDTree CONFIG
-map <C-n> :NERDTreeToggle<CR>
-
-let g:NERDTreeQuitOnOpen = 1             " Toggle on file open
-
-let g:NERDTreeWinPos = "right"           " Better UI 
-let NERDTreeDirArrows = 1
-let NERDTreeMinimalUI = 1
-
-let NERDTreeShowHidden=1                 " Show hidden files
-" END NERDTree CONFIG
+" THEME CONFIG
+colorscheme slate
+" END THEME CONFIG
 
 " GENERAL CONFIG
 set tabstop=4                            " Tabs to spaces
@@ -49,6 +45,5 @@ set smartcase
 
 set number                               " Show number lines
 
-syntax on                                " Syntax on
-"END GENERAL CONFIG
-
+syntax enable                            " Syntax enabled
+" END GENERAL CONFIG
